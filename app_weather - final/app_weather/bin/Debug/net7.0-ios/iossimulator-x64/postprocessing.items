@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="app_weather.app/app_weather">
+      <BCSymbolMapName>app_weather.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>app_weather.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>\Users\hoathan\Library\Caches\Xamarin\mtbs\builds\app_weather\27cd75248352fec68d184f8b2ec74d957d954efef68337b30df351001b4b5a53\obj\Debug\net7.0-ios\iossimulator-x64\mtouch-symbols.list</SymbolFile>
+      <DSymName>app_weather.app.dSYM</DSymName>
+      <SourceProjectPath>D:\2022-2023\C#\final\app_weather - final\app_weather</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

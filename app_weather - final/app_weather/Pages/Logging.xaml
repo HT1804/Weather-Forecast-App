@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:app_weather"
+             xmlns:appViewModels="clr-namespace:app_weather.ViewModels"
+             x:Class="app_weather.Pages.Logging"
+             BackgroundColor="#1a3065">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1a3065">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label TextColor="White" 
+                       FontAttributes="Bold" 
+                       FontSize="Subtitle" 
+                       Text="Query" 
+                       Grid.Row="0" 
+                       Grid.Column="0" />
+                <Label TextColor="White" 
+                       FontAttributes="Bold" 
+                       FontSize="Subtitle" 
+                       Text="Timestamp" 
+                       Grid.Row="0" 
+                       Grid.Column="1" />
+            </Grid>
+            <ListView ItemsSource="{Binding SearchHistoryList}" BackgroundColor="#1a3065">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions >
+                                <Label TextColor="White" Text="{Binding Query}" Grid.Column="0" />
+                                <Label TextColor="White" Text="{Binding Timestamp}" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="No search history available." 
+                   IsVisible="{Binding IsSearchHistoryEmpty}"
+                   TextColor="Black" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
